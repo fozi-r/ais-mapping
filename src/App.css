@@ -28,11 +28,63 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+.vessel-icon {
+  background: none;
+  border: none;
+}
+.vessel-icon-inner {
+  /* transition: transform 0.2s linear;
+  display: inline-block; */
+  transform-origin: center center;
+  transition: transform 0.2s linear;
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+/* Removes default Leaflet cluster styles */
+.custom-cluster-wrapper {
+  background: transparent !important;
+  border: none !important;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+/* Styles the actual cluster bubble */
+.custom-cluster {
+  background-color: rgba(51, 136, 255, 0.85);
+  color: white;
+  width: 100%;
+  height: 90%;
+  font-size: 80%;
+  font-weight: bold;
+  /* text-align: center; */
+  line-height: 100%;
+  border-radius: 50%;
+  /* border: 2px solid white; */
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+
+.cluster-icon {
+  background: rgba(0, 123, 255, 0.8);
+  border-radius: 50%;
+  color: white;
+  width: 20px;
+  height: 20px;
+  /* text-align: center; */
+  line-height: 20px;
+  font-size: 10px;
+  font-weight: bold;
 }
