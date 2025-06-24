@@ -5,6 +5,11 @@ interface ImoSearchProps {
   onChange: (value: string) => void;
 }
 
+/**
+ * 
+ * @param param0 - Component for searching vessels by IMO number
+ * @returns 
+ */
 const ImoSearch = ({ value, onChange }: ImoSearchProps) => (
   <div>
     <strong>Search by IMO</strong>

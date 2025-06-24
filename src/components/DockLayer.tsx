@@ -15,7 +15,7 @@ const DockLayer: React.FC = () => {
   const [docks, setDocks] = useState<Dock[]>([]);
 
   useEffect(() => {
-    const csvUrl = '/data/Docks_WA.csv'; // or remote URL
+    const csvUrl = '/data/Docks_WA.csv';
 
     Papa.parse(csvUrl, {
       download: true,

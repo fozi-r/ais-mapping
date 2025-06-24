@@ -3,6 +3,9 @@ import AisClassFilter from "./AisClassFilter";
 import VesselTypeFilter from "./VesselTypeFilter";
 import ImoSearch from "./ImoSearch";
 
+/**
+ * FilterPanel component for managing AIS class, vessel type, and IMO search filters
+ */
 interface FilterPanelProps {
   aisClass: string[];
   vesselType: string[];
@@ -14,6 +17,11 @@ interface FilterPanelProps {
   };
 }
 
+/**
+ * 
+ * @param param0 - Props for the FilterPanel component, including AIS class, vessel type, IMO number
+ * @returns combined filter panel component
+ */
 const FilterPanel = ({
   aisClass,
   vesselType,

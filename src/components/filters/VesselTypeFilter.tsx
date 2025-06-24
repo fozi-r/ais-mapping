@@ -1,10 +1,12 @@
 import React from "react";
 
+//how filter options are provided to the filter component
 interface VesselTypeFilterProps {
   value: string[];
   onChange: (value: string[]) => void;
 }
 
+// outline of a vessel silhouette
 const SilhouetteIcon = ({ stroke, fill }: { stroke: string; fill: string }) => {
   const scale = 20;
   const points = [
@@ -21,6 +23,7 @@ const SilhouetteIcon = ({ stroke, fill }: { stroke: string; fill: string }) => {
   );
 };
 
+// colors for each vessel type, defined by AISTrackSymbol
 const VESSEL_TYPE_COLORS: Record<string, { stroke: string; fill: string }> = {
   "Wing in Ground": { stroke: "#000000", fill: "#d3d3d3" }, // WIG_COLOR
   Pleasure: { stroke: "#8b008b", fill: "#ff00ff" }, // TYPE_3X_COLOR
@@ -32,8 +35,14 @@ const VESSEL_TYPE_COLORS: Record<string, { stroke: string; fill: string }> = {
   Other: { stroke: "#008b8b", fill: "#00ffff" }, // OTHER_COLOR
 };
 
+// List of vessel types
 const VESSEL_TYPES = ["Wing in Ground", "Pleasure", "High Speed", "Special", "Passenger", "Cargo", "Tanker", "Other"]; // Modify as needed
 
+/**
+ * 
+ * @param VesselTypeFilterProps - array of filter options
+ * @returns 
+ */
 const VesselTypeFilter = ({ value, onChange }: VesselTypeFilterProps) => {
   const toggle = (type: string) => {
     onChange(

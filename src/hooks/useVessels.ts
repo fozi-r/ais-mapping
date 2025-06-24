@@ -3,6 +3,10 @@ import { connectSignalK, fetchVesselName } from "../services/signalk";
 import { Vessel } from "../models/Vessel";
 
 // Debounced real-time vessel data hook
+/**
+ * 
+ * returns a record of vessels <string: signalk id, Vessel> with each vessel's delta transmitted from the SignalK server
+ */
 export function useVessels(): Record<string, Vessel> {
   const [renderedVessels, setRenderedVessels] = useState<Record<string, Vessel>>({});
   const vesselRef = useRef<Record<string, Vessel>>({});

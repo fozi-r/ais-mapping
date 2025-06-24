@@ -68,6 +68,10 @@ export class Vessel {
   
     /**
      * Apply Signal K delta updates directly to this vessel instance.
+     * 
+     * @param path - The SignalK path to update
+     * @param value - The new value to set
+     * @param timestamp - Optional timestamp for the update, defaults to current time
      */
     update(path: string, value: any, timestamp?: string) {
       switch (path) {
@@ -126,6 +130,10 @@ export class Vessel {
       }
     }
 
+    /**
+     * Refreshes the position report and updates the AIS track symbol
+     * This is called when the position or heading changes
+     */
     refreshPosition(){
         if(!this.positionReport.trueHeading){
             this.positionReport.trueHeading = this.getHeadingDegrees();
@@ -137,6 +145,10 @@ export class Vessel {
         }
     }
 
+    /**
+     * 
+     * Updates the static data of the AIS track symbol
+     */
     refreshStaticData(){
         if(!this.aisTrackSymbol){
             return;

@@ -9,6 +9,11 @@ import AisClassFilter from "./filters/AisClassFilter";
 import DockLayer from './DockLayer';
 import FilterPanel from "./filters/FilterPanel";
 
+/**
+ * 
+ * @returns A MapContainer component that displays a map with vessel markers, filters, and layers
+ * 
+ */
 const MapWrapper = () => {
   const [aisClassFilter, setAisClassFilter] = useState<string[]>([]);
   const [vesselTypeFilter, setVesselTypeFilter] = useState<string[]>([]);

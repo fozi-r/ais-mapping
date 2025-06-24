@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 // components/AisClassFilter.tsx
+/**
+ * Ais class filter component for filtering vessels by AIS class
+ */
 interface AisClassFilterProps {
     value: string[];
     onChange: (value: string[]) => void;
