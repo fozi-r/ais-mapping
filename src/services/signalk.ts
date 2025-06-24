@@ -17,7 +17,6 @@
 // }
 const requestedNames = new Set<string>();
 const SIGNALK_URL = "ws://localhost:3000/signalk/v1/stream";
-const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Im1hcmV4cHMiLCJpYXQiOjE3NDQxMzg0OTh9.s1iZy_EHn0v5p0M7JUOvG3Yib-yKSsNls8MvcwUxDko"
 
 interface SubscriptionPath {
   context: string; // e.g. "vessels.self" or "vessels.*"
