@@ -53,5 +53,6 @@
   "devDependencies": {
     "@types/leaflet": "^1.9.17",
     "@types/papaparse": "^5.3.16"
-  }
+  },
+  "homepage": "https://github.com/fozi-r/ais-mapping"
 }
